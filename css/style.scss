@@ -1,37 +1,12 @@
 $orderButtonColor: rgb(0, 0, 0);
 $menuBgColor: rgb(255, 255, 255);
-$menuFontColor: #000000;
+$menuFontColor: #54499c;
 $orderBorderColor: rgba(119, 119, 119, 0.74);
+$mainWrapper: 1200px;
 
-/*.menu {
-  padding: 0;
-  margin: 0;
-
-  list-style: none;
-  background-color: $menuBgColor;
-  color: $menuFontColor;
-
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-
-  //border:  1px solid black;
-
-  li {
-    text-align: center;
-  }
-
-  li:last-child {
-    margin-right: 10px;
-  }
-
-  p {
-    margin: 0;
-    padding: 0;
-  }
-
-}*/
-
+* {
+  box-sizing: border-box;
+}
 body {
   margin: 0;
   padding: 0;
@@ -53,12 +28,10 @@ body {
     width: 33vw;
     margin: 0 auto;
     padding-top: 10vh;
-    /*border-bottom-left-radius: 5px;
-    border-bottom-right-radius: 5px;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);*/
   }
 
-  &__nav {
+  .nav__wrapper {
+
     height: 50px;
     width: 100%;
 
@@ -66,12 +39,19 @@ body {
     left: 0;
     top: 0;
     z-index: 10;
+    background-color: rgb(228, 27, 35);
+
+  }
+  &__nav {    
+    position: relative;
+    max-width: $mainWrapper;
+    margin: 0 auto;
 
     font-size: 1.3rem;
     font-weight: bold;
-    background-color: rgb(228, 27, 35);
+    
 
-    img {
+    .nav__logo {
       position: absolute;
       left: 0;
       top: 0;
@@ -140,132 +120,158 @@ body {
 
 }
 
-.catalog {
+main {
+max-width: $mainWrapper;
+margin: 0 auto;
 
-  margin-top: 0;
-
-  .pizza__header,
-  .salad__header,
-  .drinks__header {
-    margin: 0;
-    padding-top: 80px;
-    font-size: 3rem;
-    text-align: center;
-
-  }
-
-  &__pizza,
-  &__salad,
-  &__drinks {
-    display: flex;
-    justify-content: space-around;
-    align-items: flex-start;
-    flex-wrap: wrap;
-
-    .item {
-      width: 25%;
-
-      margin-left: 10px;
-      margin-top: 30px;
-
-      &__photo {
-        width: 95%;
-      }
-
-      &__header {
-        text-align: center;
-
+  .catalog {
+    margin-top: 0;
+  
+    .pizza__header,
+    .salad__header,
+    .drinks__header {
+      margin: 0;
+      padding-top: 80px;
+      font-size: 3rem;
+      text-align: center;
+  
+    }
+  
+    &__pizza,
+    &__salad,
+    &__drinks {
+      display: flex;
+      justify-content: center;
+      align-items: flex-start;
+      flex-wrap: wrap;
+        
+      .item {
+        width: 28%;
+  
+        margin-left: 35px;
+        margin-top: 50px;
+        transition: box-shadow .3s linear;
+        
+        border-radius: 5px;
+             
         &:hover {
-          color: #6a6a6a;
-          cursor: pointer;
-        }
-      }
+          border-radius: 5px;
+          box-shadow: 5px 5px 15px rgba(143, 143, 143, 0.25),
+          -5px -5px 15px rgba(143, 143, 143, 0.25) ;
+          transition: box-shadow .3s linear;
+          
 
-      &__description {
-        min-height: 120px;
-        text-align: center;
-        color: #6a6a6a;
-      }
+          & .item__photo {
+            padding: 10px;
+            transition: padding .2s linear;
+          }
 
-      &__size {
-        position: relative;
-        margin-left: 5px;
-      }
-
-      &__price {
-        display: block;
-        position: absolute;
-        right: 0;
-        top: 0;
-        font-size: 20px;
-        font-weight: bold;
-        margin-right: 5px;
-
-      }
-
-      .order {
-        display: flex;
-
-        &__btn {
-          flex: 1 1 auto;
-          height: 45px;
-          color: white;
-          background-color: $orderButtonColor;
-          text-align: center;
-          line-height: 45px;
-          font-size: 1.2rem;
-
-          &:hover {
-            cursor: pointer;
+          & .item__header {
+            color: #6a6a6a;
           }
         }
 
-        &__qtty {
-          box-sizing: border-box;
-          flex: 0 0 40px;
-          height: 45px;
-          color: white;
-          background-color: $orderButtonColor;
-          border-left: 1px solid $orderBorderColor;
-          border-right: 1px solid $orderBorderColor;
-
-          text-align: center;
-          line-height: 45px;
+        &__photo {
+          width: 90%;
+          display: block;
+          margin: 0 auto;
+          padding: 15px;
+          transition: padding .2s linear;
         }
-
-        .btn-counter {
+  
+        &__header {
+          margin: 5px;
+          text-align: center;
+        }
+  
+        &__description {
+          min-height: 90px;
+          padding: 0 10px;
+          text-align: center;
+          color: #6a6a6a;
+        }
+  
+        &__size {
+          position: relative;
+          padding-left: 10px;
+        }
+  
+        &__price {
+          display: block;
+          position: absolute;
+          right: 0;
+          top: 0;
+          font-size: 20px;
+          font-weight: bold;
+          margin-right: 5px;
+  
+        }
+  
+        .order {
           display: flex;
-          flex-direction: column;
-
-          &__increase,
-          &__decrease {
-            box-sizing: border-box;
-
-            flex: 0 0 22.5px;
-            width: 30px;
-
+  
+          &__btn {
+            flex: 1 1 auto;
+            height: 45px;
             color: white;
             background-color: $orderButtonColor;
             text-align: center;
-            line-height: 20px;
-
+            line-height: 45px;
+            font-size: 1.2rem;
+  
             &:hover {
               cursor: pointer;
             }
           }
-
-          &__decrease {
-            border-top: 1px solid $orderBorderColor;
+  
+          &__qtty {
+            box-sizing: border-box;
+            flex: 0 0 40px;
+            height: 45px;
+            color: white;
+            background-color: $orderButtonColor;
+            border-left: 1px solid $orderBorderColor;
+            border-right: 1px solid $orderBorderColor;
+  
+            text-align: center;
+            line-height: 45px;
           }
-
+  
+          .btn-counter {
+            display: flex;
+            flex-direction: column;
+  
+            &__increase,
+            &__decrease {
+              box-sizing: border-box;
+  
+              flex: 0 0 22.5px;
+              width: 30px;
+  
+              color: white;
+              background-color: $orderButtonColor;
+              text-align: center;
+              line-height: 20px;
+  
+              &:hover {
+                cursor: pointer;
+              }
+            }
+  
+            &__decrease {
+              border-top: 1px solid $orderBorderColor;
+            }
+  
+          }
+  
         }
-
+  
       }
-
+  
     }
-
-  }
+  }  
 }
+
 
 .popupWindow {
   position: fixed;
@@ -334,6 +340,28 @@ body {
 
   }
 
+}
+
+@media (max-width: 1100px) {
+  main  .catalog .catalog__pizza .item,
+  main  .catalog .catalog__salad .item,
+  main  .catalog .catalog__drinks .item {
+    width: 37%;
+   }
+}
+
+@media (max-width: 835px) {
+  main  .catalog .catalog__pizza .item,
+  main  .catalog .catalog__salad .item,
+  main  .catalog .catalog__drinks .item {
+    width: 50%;
+   }
+}
+
+@media (max-width: 775px) {
+  .nav__logo {
+    display: none;
+   }
 }
 
 
