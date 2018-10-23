@@ -1,0 +1,128 @@
+{
+  "pizza": [
+    {
+      "article": "p1",
+      "name": "Пепперони",
+      "price": 150,
+      "description": "Итальянская мука, Моцарелла, соус из цельных томатов, настоящая итальянская pepperoni, перец острый, каперсы, арегано",
+      "size": 30,
+      "image": "img/papperoni.png",
+      "photos": ["img/photo/1.jpg", "img/photo/2.jpg", "img/photo/3.jpg"],
+      "orderQtty": 0
+    },
+    {
+      "article": "p2",
+      "name": "Маргарита",
+      "price": 140,
+      "description": "Итальянская мука, соус из цельных томатов, моцарелла, томаты, соус Песто",
+      "size": 30,
+      "image": "img/margarita.png",
+      "photos": ["img/photo/1.jpg", "img/photo/2.jpg", "img/photo/3.jpg"],
+      "orderQtty": 0
+    },
+    {
+      "article": "p3",
+      "name": "Гавайская",
+      "price": 140,
+      "description": "Итальянская мука, соус из цельных томатов, моцарелла, курица печеная, ананас, перец болгарский, апельсиновая горчица, клюква, орегано",
+      "size": 30,
+      "image": "img/hawaii.png",
+      "photos": ["img/photo/1.jpg", "img/photo/2.jpg", "img/photo/3.jpg"],
+      "orderQtty": 0
+    },
+    {
+      "article": "p4",
+      "name": "4 Сыра",
+      "price": 140,
+      "description": "Итальянская мука, соус из цельных томатов, моцарелла, курица печеная, ананас, перец болгарский, апельсиновая горчица, клюква, орегано",
+      "size": 30,
+      "image": "img/4cheeses.png",
+      "photos": ["img/photo/1.jpg", "img/photo/2.jpg", "img/photo/3.jpg"],
+      "orderQtty": 0
+    },
+    {
+      "article": "p5",
+      "name": "4 Мяса",
+      "price": 140,
+      "description": "Итальянская мука, соус из цельных томатов, моцарелла, курица печеная, ананас, перец болгарский, апельсиновая горчица, клюква, орегано",
+      "size": 30,
+      "image": "img/4meats.png",
+      "orderQtty": 0
+    },
+    {
+      "article": "p6",
+      "name": "Баварская",
+      "price": 140,
+      "description": "Итальянская мука, соус из цельных томатов, моцарелла, курица печеная, ананас, перец болгарский, апельсиновая горчица, клюква, орегано",
+      "size": 30,
+      "image": "img/bavarskaya.png",
+      "orderQtty": 0
+    },
+    {
+      "article": "p7",
+      "name": "Карбонара",
+      "price": 140,
+      "description": "Итальянская мука, соус из цельных томатов, моцарелла, курица печеная, ананас, перец болгарский, апельсиновая горчица, клюква, орегано",
+      "size": 30,
+      "image": "img/karbornara.png",
+      "orderQtty": 0
+    },
+
+    {
+      "article": "p8",
+      "name": "Курици и Сыр",
+      "price": 140,
+      "description": "Итальянская мука, соус из цельных томатов, моцарелла, курица печеная, ананас, перец болгарский, апельсиновая горчица, клюква, орегано",
+      "size": 30,
+      "image": "img/chicken-and-cheese.png",
+      "orderQtty": 0
+    },
+    {
+      "article": "p9",
+      "name": "Mama's Pizza",
+      "price": 130,
+      "description": "Сливочно-сырный соус на основе Пармезана, шпинат, грибы, лук-порей",
+      "size": 30,
+      "image": "img/mamas.png",
+      "orderQtty": 0
+    }
+  ],
+
+  "salads": [
+    {
+      "article": "s1",
+      "name": "Греческий",
+      "price": 150,
+      "description": "Итальянская мука, Моцарелла, соус из цельных томатов, настоящая итальянская pepperoni, перец острый, каперсы, арегано",
+      "image": "img/greek.png",
+      "orderQtty": 0
+    },
+    {
+      "article": "s2",
+      "name": "Цезарь",
+      "price": 140,
+      "description": "Итальянская мука, соус из цельных томатов, моцарелла, томаты, соус Песто",
+      "image": "img/caesar.png",
+      "orderQtty": 0
+    },
+    {
+      "article": "s3",
+      "name": "Мамас",
+      "price": 140,
+      "description": "Итальянская мука, соус из цельных томатов, моцарелла, курица печеная, ананас, перец болгарский, апельсиновая горчица, клюква, орегано",
+      "image": "img/mamasSalad.png",
+      "orderQtty": 0
+    }
+  ],
+
+  "drinks": [
+    {
+      "article": "d1",
+      "name": "Лимонад",
+      "price": 25,
+      "description": "Лимонад домашний, натуральный и очень кусный",
+      "image": "img/lemonade.jpg",
+      "orderQtty": 0
+    }
+  ]
+}

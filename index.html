@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+	<meta charset="UTF-8">
+	<title>Mama's Pizza</title>
+	<link rel="stylesheet" href="css/style.css">
+	<link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+</head>
+
+<body>
+
+	<header class="header">
+
+		<nav class="header__nav nav">
+			<img src="img/logo_white-2.png" alt="logo">
+			<ul class="nav__list">
+				<li class="nav__item" id="nav__pizza"><a href="#pizza">Пицца</a></li>
+				<li class="nav__item" id="nav__salads"><a href="#salads">Салаты</a></li>
+				<li class="nav__item" id="nav__drinks"><a href="#drinks">Напитки</a></li>
+				<li class="nav__item" id="nav__contacts"><a href="">Контакты</a></li>
+			</ul>
+		</nav>
+
+		<img class="header__logo" src="img/logo-3.png" alt="logo" width="500">
+
+
+	</header>
+
+	<main>
+		<div class="catalog">
+			<div id="pizza"></div>
+			<h2 class="pizza__header">Наша Пицца:</h2>
+			<section class="catalog__pizza pizza">
+
+				<!--<article class="pizza__item item">-->
+				<!--<img class="item__photo" src="img/pepperoni.png" alt="with bacon">-->
+				<!--<h2 class="item__header">Пепперони</h2>-->
+				<!--<p class="item__description">Итальянская мука, соус из цельных томатов, моцарелла, дорблю, сыровяленый бекон, острый перец</p>-->
+				<!--<p class="item__size">Размер  30 см<span class="item__price">150 грн.</span></p>-->
+
+				<!--<div class="item__order order">-->
+				<!--<div class="order__btn">В корзину</div>-->
+				<!--<div class="order__qtty">1</div>-->
+				<!--<div class="order__btn-counter btn-counter">-->
+				<!--<div class="btn-counter__increase">+</div>-->
+				<!--<div class="btn-counter__decrease">-</div>-->
+				<!--</div>-->
+				<!--</div>-->
+				<!--</article>-->
+			</section>
+
+			<h2 class="salad__header" id="salads">Нашы Салаты:</h2>
+			<section class="catalog__salad salad"></section>
+
+			<h2 class="drinks__header" id="drinks">Нашы Напитки:</h2>
+			<section class="catalog__drinks drinks"></section>
+
+		</div>
+
+		
+	</main>
+
+	<aside class="popupWindow hidden">
+		<h3>Мы рады принять Ваш заказ по телефону</h3>
+		<p>тел. 050 395 67 26</p>
+		<p>c уважением Mama's Pizza</p>
+		<button class="popupWindow__btn-close">Закрыть</button>
+	</aside>
+
+	<aside class="gallery-box">
+		<div class="photo-container"><img src="img/photo/1.jpg" alt=""></div>
+	</aside>
+
+
+	<footer class="footer">
+
+		<img src="img/logo_rw.png" alt="logo" class="footer__logo">
+		<ul class="social__list">
+			<li class="social__item fb"><a href="#"><img src="img/icon/fb.png" alt="fb"></a></li>
+			<li class="social__item insta"><a href="#"><img src="img/icon/insta.png" alt="insta"></a></li>
+			<li class="social__item twitter"><a href="#"><img src="img/icon/tw.png" alt="tw"></a></li>
+			<li class="social__item google"><a href="#"><img src="img/icon/lg.png" alt="google+"></a></li>
+		</ul>
+
+		<section class="footer__contacts">
+
+			<p class="contacts"></p>
+			<p class="copyRight"></p>
+		</section>
+	</footer>
+
+	<script src="js/main.js"></script>
+
+</body>
+
+</html>
