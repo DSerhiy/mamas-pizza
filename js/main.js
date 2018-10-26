@@ -148,27 +148,33 @@ window.onscroll = ()=> {
     const pizza = document.getElementById('pizza');
     const salads = document.getElementById('salads');
     const drinks = document.getElementById('drinks');
+    const contacts = document.getElementById('contacts');
 
     const pizzaBtn = document.getElementById('nav__pizza');
     const saladsBtn = document.getElementById('nav__salads');
     const drinksBtn = document.getElementById('nav__drinks');
+    const contactsBtn = document.getElementById('nav__contancts');
 
     if(window.pageYOffset >= (pizza.offsetTop) && window.pageYOffset < (salads.offsetTop)){
         pizzaBtn.classList.add('active');
         saladsBtn.classList.remove('active');
         drinksBtn.classList.remove('active');
+        contacts.Btn.classLiss.remove('active');
     } else if (window.pageYOffset >= (salads.offsetTop) && window.pageYOffset < (drinks.offsetTop)){
         saladsBtn.classList.add('active');
         pizzaBtn.classList.remove('active');
         drinksBtn.classList.remove('active');
-    } else if (window.pageYOffset >= (drinks.offsetTop)){
+        contacts.Btn.classLiss.remove('active');
+    } else if (window.pageYOffset >= (drinks.offsetTop) && window.pageYOffset < (contacts.offsetTop)){
         saladsBtn.classList.remove('active');
         pizzaBtn.classList.remove('active');
+        contacts.Btn.classLiss.remove('active');
         drinksBtn.classList.add('active');
-    } else {
+    } else  {
         saladsBtn.classList.remove('active');
         pizzaBtn.classList.remove('active');
         drinksBtn.classList.remove('active');
+        contacts.Btn.classLiss.add('active');
     }
 };
 

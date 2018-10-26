@@ -5,30 +5,29 @@
 	<meta charset="UTF-8">
 	<title>Mama's Pizza</title>
 	<link rel="stylesheet" href="css/style.css">
+	<link rel="shortcut icon" type="image/png" href="favicon.png" />
 	<link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
 </head>
 
 <body>
 
 	<header class="header">
-
 		<div class="nav__wrapper">
 			<nav class="header__nav nav">
-	
 				<img class="nav__logo" src="img/logo_white-2.png" alt="logo">
-	
 				<ul class="nav__list">
-					<li class="nav__item" id="nav__pizza"><a href="#pizza">Пицца</a></li>
-					<li class="nav__item" id="nav__salads"><a href="#salads">Салаты</a></li>
-					<li class="nav__item" id="nav__drinks"><a href="#drinks">Напитки</a></li>
-					<li class="nav__item" id="nav__contacts"><a href="">Контакты</a></li>
+					<li class="nav__item" id="nav__pizza">
+						<a href="#pizza">Пицца</a></li>
+					<li class="nav__item" id="nav__salads">
+						<a href="#salads">Салаты</a></li>
+					<li class="nav__item" id="nav__drinks">
+						<a href="#drinks">Напитки</a></li>
+					<li class="nav__item" id="nav__contacts">
+						<a href="#contacts">Контакты</a></li>
 				</ul>
 			</nav>
 		</div>
-
 		<img class="header__logo" src="img/logo-3.png" alt="logo" width="500">
-
-
 	</header>
 
 	<main>
@@ -62,12 +61,39 @@
 
 		</div>
 
+		<section class="contacts">
+			<h1 id="contacts">Контакты и доставка:</h1>
+
+			<p>Стоимость доставки: </p>
+			<p>- 50грн при сумме заказа меньше 250грн</p>
+			<p>- Бесплатно при сумме заказа от 250грн и выше</p>
+			<p>Доставка производится в отмеченной на карте зоне c 10:00 до 22:00</p>
+			
+			<div class="map">
+				<iframe src="https://www.google.com/maps/d/embed?mid=1rg87asopLbDmEAZpLmO4ZEKbm0ecJRhz" width="640" height="480"></iframe>
+			</div>
+
+		</section>
+
 
 	</main>
 
 	<aside class="popupWindow hidden">
-		<h3>Мы рады принять Ваш заказ по телефону</h3>
-		<p>тел. 050 395 67 26</p>
+		<h3>Мы рады принять Ваш заказ по телефонам:</h3>
+		<table>
+				<tr>
+					<td>Vodafone:</td>
+					<td>050 393 22 72</td>
+				</tr>
+				<tr>
+					<td>KiyvStar:</td>
+					<td>067 393 22 72</td>
+				</tr>
+				<tr>
+					<td>LifeCell:</td>
+					<td>093 393 22 72</td>
+				</tr>
+			</table>
 		<p>c уважением Mama's Pizza</p>
 		<button class="popupWindow__btn-close">Закрыть</button>
 	</aside>
@@ -78,20 +104,41 @@
 
 
 	<footer class="footer">
+		<div class="wrapper">
 
-		<img src="img/logo_rw.png" alt="logo" class="footer__logo">
-		<ul class="social__list">
-			<li class="social__item fb"><a href="#"><img src="img/icon/fb.png" alt="fb"></a></li>
-			<li class="social__item insta"><a href="#"><img src="img/icon/insta.png" alt="insta"></a></li>
-			<li class="social__item twitter"><a href="#"><img src="img/icon/tw.png" alt="tw"></a></li>
-			<li class="social__item google"><a href="#"><img src="img/icon/lg.png" alt="google+"></a></li>
-		</ul>
+			<img src="img/logo_rw.png" alt="logo" class="footer__logo">
 
-		<section class="footer__contacts">
+			<ul class="social__list">
+				<li class="social__item fb">
+					<a href="#"><img src="img/icon/fb.png" alt="fb"></a></li>
+				<li class="social__item insta">
+					<a href="#"><img src="img/icon/insta.png" alt="insta"></a></li>
+				<li class="social__item twitter">
+					<a href="#"><img src="img/icon/tw.png" alt="tw"></a></li>
+				<li class="social__item google">
+					<a href="#"><img src="img/icon/lg.png" alt="google+"></a></li>
+			</ul>
 
-			<p class="contacts"></p>
-			<p class="copyRight"></p>
-		</section>
+			<p class="footer__address">г.Одесса.ул. Семена Палия 151а</p>
+
+			<section class="footer__contacts">
+				<table>
+					<tr>
+						<td>Vodafone:</td>
+						<td>050 393 22 72</td>
+					</tr>
+					<tr>
+						<td>KiyvStar:</td>
+						<td>067 393 22 72</td>
+					</tr>
+					<tr>
+						<td>LifeCell:</td>
+						<td>093 393 22 72</td>
+					</tr>
+				</table>
+
+			</section>
+		</div>
 	</footer>
 
 	<script src="js/main.js"></script>

@@ -3,10 +3,10 @@ $menuBgColor: rgb(255, 255, 255);
 $menuFontColor: #54499c;
 $orderBorderColor: rgba(119, 119, 119, 0.74);
 $mainWrapper: 1200px;
-
 * {
   box-sizing: border-box;
 }
+
 body {
   margin: 0;
   padding: 0;
@@ -15,100 +15,79 @@ body {
 }
 
 .header {
-
   background-image: url('../img/bg-2.jpg');
   background-repeat: no-repeat;
   background-size: cover;
-
   min-height: 100vh;
   text-align: right;
-
   &__logo {
     display: block;
     width: 33vw;
     margin: 0 auto;
     padding-top: 10vh;
   }
-
   .nav__wrapper {
-
     height: 50px;
     width: 100%;
-
     position: fixed;
     left: 0;
     top: 0;
     z-index: 10;
     background-color: rgb(228, 27, 35);
-
   }
-  &__nav {    
+  &__nav {
     position: relative;
     max-width: $mainWrapper;
     margin: 0 auto;
-
     font-size: 1.3rem;
     font-weight: bold;
-    
-
     .nav__logo {
       position: absolute;
       left: 0;
       top: 0;
-
       margin-top: 5px;
       margin-left: 10px;
       height: 40px;
-
     }
-
     .nav__list {
       height: 50px;
       margin: 0;
       padding: 0;
-
       display: flex;
       justify-content: center;
       align-items: center;
-
       text-align: left;
       list-style: none;
     }
-
     .nav__item {
       width: 120px;
       height: 30px;
       margin: 0;
       padding-left: 5px;
       text-align: center;
-
       border-right: 2px solid rgba(0, 0, 0, 0.29);
       &:last-child {
         border-right: none;
       }
-
       transition: 0.6s liner;
-      transition-property: color, font-size;
-      color: rgb(255, 255, 255);
-
+      transition-property: color,
+      font-size;
+      color: rgb(255,
+      255,
+      255);
       &.active {
         font-size: 1.6rem;
         color: rgb(92, 2, 1);
-
         transition: 0.5s liner;
         transition-property: color, font-size;
       }
-
       &:hover {
-
         font-size: 1.6rem;
         cursor: pointer;
         color: rgb(92, 2, 1);
-
         transition: 0.5s liner;
         transition-property: color, font-size;
       }
-
       a {
         display: block;
         text-decoration: none;
@@ -117,16 +96,13 @@ body {
       }
     }
   }
-
 }
 
 main {
-max-width: $mainWrapper;
-margin: 0 auto;
-
+  max-width: $mainWrapper;
+  margin: 0 auto;
   .catalog {
     margin-top: 0;
-  
     .pizza__header,
     .salad__header,
     .drinks__header {
@@ -134,9 +110,7 @@ margin: 0 auto;
       padding-top: 80px;
       font-size: 3rem;
       text-align: center;
-  
     }
-  
     &__pizza,
     &__salad,
     &__drinks {
@@ -144,33 +118,24 @@ margin: 0 auto;
       justify-content: center;
       align-items: flex-start;
       flex-wrap: wrap;
-        
       .item {
         width: 28%;
-  
         margin-left: 35px;
         margin-top: 50px;
         transition: box-shadow .3s linear;
-        
         border-radius: 5px;
-             
         &:hover {
           border-radius: 5px;
-          box-shadow: 5px 5px 15px rgba(143, 143, 143, 0.25),
-          -5px -5px 15px rgba(143, 143, 143, 0.25) ;
+          box-shadow: 5px 5px 15px rgba(143, 143, 143, 0.25), -5px -5px 15px rgba(143, 143, 143, 0.25);
           transition: box-shadow .3s linear;
-          
-
           & .item__photo {
             padding: 10px;
             transition: padding .2s linear;
           }
-
           & .item__header {
             color: #6a6a6a;
           }
         }
-
         &__photo {
           width: 90%;
           display: block;
@@ -178,24 +143,20 @@ margin: 0 auto;
           padding: 15px;
           transition: padding .2s linear;
         }
-  
         &__header {
           margin: 5px;
           text-align: center;
         }
-  
         &__description {
           min-height: 90px;
           padding: 0 10px;
           text-align: center;
           color: #6a6a6a;
         }
-  
         &__size {
           position: relative;
           padding-left: 10px;
         }
-  
         &__price {
           display: block;
           position: absolute;
@@ -204,12 +165,9 @@ margin: 0 auto;
           font-size: 20px;
           font-weight: bold;
           margin-right: 5px;
-  
         }
-  
         .order {
           display: flex;
-  
           &__btn {
             flex: 1 1 auto;
             height: 45px;
@@ -218,12 +176,10 @@ margin: 0 auto;
             text-align: center;
             line-height: 45px;
             font-size: 1.2rem;
-  
             &:hover {
               cursor: pointer;
             }
           }
-  
           &__qtty {
             box-sizing: border-box;
             flex: 0 0 40px;
@@ -232,65 +188,83 @@ margin: 0 auto;
             background-color: $orderButtonColor;
             border-left: 1px solid $orderBorderColor;
             border-right: 1px solid $orderBorderColor;
-  
             text-align: center;
             line-height: 45px;
           }
-  
           .btn-counter {
             display: flex;
             flex-direction: column;
-  
             &__increase,
             &__decrease {
               box-sizing: border-box;
-  
               flex: 0 0 22.5px;
               width: 30px;
-  
               color: white;
               background-color: $orderButtonColor;
               text-align: center;
               line-height: 20px;
-  
               &:hover {
                 cursor: pointer;
               }
             }
-  
             &__decrease {
               border-top: 1px solid $orderBorderColor;
             }
-  
           }
-  
         }
-  
       }
-  
     }
-  }  
-}
+  }
+  .contacts {
+    // margin-top: 50px;
+    h1 {
+      margin: 0;
+      padding: 0;
+      padding-top: 80px;
+      font-size: 3rem;
+      text-align: center;
+      margin-bottom: 50px;
+    }
 
+    p {
+      display: block;
+      padding-left: 50px;
+      max-width: $mainWrapper;
+      // border: 1px solid black; 
+    }
+  }
+  .map {
+    max-width: $mainWrapper;
+    position: relative;
+    margin-top: 50px;
+    overflow: hidden;
+    // border: 1px solid black;
+    iframe {
+      display: inline-block;
+      position: relative;
+      top: -47px;
+      width: 80%;
+      height: 700px;
+      display: block;
+      margin-left: 50px; 
+    }   
+  }
+}
 
 .popupWindow {
   position: fixed;
   top: 30%;
   left: 50%;
   margin-left: -15rem;
-
-  width: 30rem;
+  width: 33rem;
   padding: 10px 10px;
-
   font-size: 1.2rem;
   border: 1px solid grey;
   background-color: lightgrey;
-
   &__btn-close {
     display: block;
     margin: 0 auto;
   }
-
 }
 
 .hidden {
@@ -300,81 +274,72 @@ margin: 0 auto;
 .footer {
   width: 100%;
   margin-top: 50px;
-  padding: 50px 20px;
-
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-
-  color: #fff;
+  padding: 50px 50px;
+  color: rgb(223, 222, 222);
   background-color: rgb(0, 0, 0);
-
   &__logo {
     width: 250px;
   }
-
+  .wrapper {
+    position: relative;
+    max-width: $mainWrapper;
+    margin: 0 auto;
+    // border: 1px solid white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
   .social__list {
     display: flex;
     justify-content: center;
-
-    height: 68px;
-
+    height: 48px;
     padding: 0;
     list-style: none;
-
+    // border: 1px solid white;
   }
-
   .social__item {
-    margin-left: 5px;
-    width: 64px;
-
+    // border: 1px solid red;
     img {
       width: 48px;
-      transition: width 0.1s linear;
-
+      padding: 4px; 
+      transition: padding 0.1s linear;
+      // border: 1px solid greenyellow;
       &:hover {
-        width: 64px;
-        transition: width 0.1s linear;
+        padding: 0;
+        transition: padding 0.1s linear;
       }
     }
-
   }
 
+  .footer__address {
+    position: absolute;
+    left: 7%;
+    right: 0;
+    bottom: -30px;
+    // border: 1px solid red; 
+    text-align: center;
+
+  }
 }
 
 @media (max-width: 1100px) {
-  main  .catalog .catalog__pizza .item,
-  main  .catalog .catalog__salad .item,
-  main  .catalog .catalog__drinks .item {
+  main .catalog .catalog__pizza .item,
+  main .catalog .catalog__salad .item,
+  main .catalog .catalog__drinks .item {
     width: 37%;
-   }
+  }
 }
 
 @media (max-width: 835px) {
-  main  .catalog .catalog__pizza .item,
-  main  .catalog .catalog__salad .item,
-  main  .catalog .catalog__drinks .item {
+  main .catalog .catalog__pizza .item,
+  main .catalog .catalog__salad .item,
+  main .catalog .catalog__drinks .item {
     width: 50%;
-   }
+  }
 }
 
 @media (max-width: 775px) {
   .nav__logo {
     display: none;
-   }
+  }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

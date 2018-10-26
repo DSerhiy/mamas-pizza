@@ -78,8 +78,8 @@ body {
   border-right: 2px solid rgba(0, 0, 0, 0.29);
   -webkit-transition: 0.6s liner;
   transition: 0.6s liner;
-  -webkit-transition-property: color, font-size;
-  transition-property: color, font-size;
+  -webkit-transition-property: color, font-size;
+  transition-property: color, font-size;
   color: white;
 }
 
@@ -280,12 +280,44 @@ main .catalog__pizza .item .order .btn-counter__decrease, main .catalog__salad .
   border-top: 1px solid rgba(119, 119, 119, 0.74);
 }
 
+main .contacts h1 {
+  margin: 0;
+  padding: 0;
+  padding-top: 80px;
+  font-size: 3rem;
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+main .contacts p {
+  display: block;
+  padding-left: 50px;
+  max-width: 1200px;
+}
+
+main .map {
+  max-width: 1200px;
+  position: relative;
+  margin-top: 50px;
+  overflow: hidden;
+}
+
+main .map iframe {
+  display: inline-block;
+  position: relative;
+  top: -47px;
+  width: 80%;
+  height: 700px;
+  display: block;
+  margin-left: 50px;
+}
+
 .popupWindow {
   position: fixed;
   top: 30%;
   left: 50%;
   margin-left: -15rem;
-  width: 30rem;
+  width: 33rem;
   padding: 10px 10px;
   font-size: 1.2rem;
   border: 1px solid grey;
@@ -304,7 +336,19 @@ main .catalog__pizza .item .order .btn-counter__decrease, main .catalog__salad .
 .footer {
   width: 100%;
   margin-top: 50px;
-  padding: 50px 20px;
+  padding: 50px 50px;
+  color: #dfdede;
+  background-color: black;
+}
+
+.footer__logo {
+  width: 250px;
+}
+
+.footer .wrapper {
+  position: relative;
+  max-width: 1200px;
+  margin: 0 auto;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -314,12 +358,6 @@ main .catalog__pizza .item .order .btn-counter__decrease, main .catalog__salad .
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  color: #fff;
-  background-color: black;
-}
-
-.footer__logo {
-  width: 250px;
 }
 
 .footer .social__list {
@@ -329,26 +367,30 @@ main .catalog__pizza .item .order .btn-counter__decrease, main .catalog__salad .
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  height: 68px;
+  height: 48px;
   padding: 0;
   list-style: none;
 }
 
-.footer .social__item {
-  margin-left: 5px;
-  width: 64px;
-}
-
 .footer .social__item img {
   width: 48px;
-  -webkit-transition: width 0.1s linear;
-  transition: width 0.1s linear;
+  padding: 4px;
+  -webkit-transition: padding 0.1s linear;
+  transition: padding 0.1s linear;
 }
 
 .footer .social__item img:hover {
-  width: 64px;
-  -webkit-transition: width 0.1s linear;
-  transition: width 0.1s linear;
+  padding: 0;
+  -webkit-transition: padding 0.1s linear;
+  transition: padding 0.1s linear;
+}
+
+.footer .footer__address {
+  position: absolute;
+  left: 7%;
+  right: 0;
+  bottom: -30px;
+  text-align: center;
 }
 
 @media (max-width: 1100px) {
