@@ -1,148 +1,136 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="en">
 
 <head>
-	<meta charset="UTF-8">
-	<title>Mama's Pizza</title>
-	<link rel="stylesheet" href="css/style.css">
-	<link rel="shortcut icon" type="image/png" href="favicon.png" />
-	<link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="newStyle.css">
+  <title>Document</title>
 </head>
 
 <body>
 
-	<header class="header">
-		<div class="nav__wrapper">
-			<nav class="header__nav nav">
-				<img class="nav__logo" src="img/logo_white-2.png" alt="logo">
-				<ul class="nav__list">
-					<li class="nav__item" id="nav__pizza">
-						<a href="#pizza">Пицца</a></li>
-					<li class="nav__item" id="nav__salads">
-						<a href="#salads">Салаты</a></li>
-					<li class="nav__item" id="nav__drinks">
-						<a href="#drinks">Напитки</a></li>
-					<li class="nav__item" id="nav__contacts">
-						<a href="#contacts">Контакты</a></li>
-				</ul>
-			</nav>
-		</div>
-		<img class="header__logo" src="img/logo-3.png" alt="logo" width="500">
-	</header>
+  <nav class="page-nav">
+    <div class="wrapper">
+      <img src="img/logo_white-2.png" class="page-nav__logo" alt="logo">
+      <ul class="page-nav__nav-list">
+        <li class="page-nav__nav-item"><a href="#pizza-anchor">Пицца</a></li>
+        <li class="page-nav__nav-item"><a href="#salad-anchor">Салаты</a></li>
+        <li class="page-nav__nav-item"><a href="#drink-anchor">Напитки</a></li>
+        <li class="page-nav__nav-item"><a href="#delivery-anchor">Доставка</a></li>
+      </ul>
+    </div>
+  </nav>
 
-	<main>
-		<div class="catalog">
-			<div id="pizza"></div>
-			<h2 class="pizza__header">Наша Пицца:</h2>
-			<section class="catalog__pizza pizza">
+  <header class="page-header">
+    <img src="img/logo-3.png" alt="" class="page-header__logo">
+  </header>
 
-				<!--<article class="pizza__item item">-->
-				<!--<img class="item__photo" src="img/pepperoni.png" alt="with bacon">-->
-				<!--<h2 class="item__header">Пепперони</h2>-->
-				<!--<p class="item__description">Итальянская мука, соус из цельных томатов, моцарелла, дорблю, сыровяленый бекон, острый перец</p>-->
-				<!--<p class="item__size">Размер  30 см<span class="item__price">150 грн.</span></p>-->
+  <main class="main-section">
+    <div class="wrapper">
 
-				<!--<div class="item__order order">-->
-				<!--<div class="order__btn">В корзину</div>-->
-				<!--<div class="order__qtty">1</div>-->
-				<!--<div class="order__btn-counter btn-counter">-->
-				<!--<div class="btn-counter__increase">+</div>-->
-				<!--<div class="btn-counter__decrease">-</div>-->
-				<!--</div>-->
-				<!--</div>-->
-				<!--</article>-->
-			</section>
+      <section class="pizza-section">
+        <div id="pizza-anchor"></div>
+        <h1 class="pizza-section__title">Наша пицца:</h1>
+        <div class="pizza-section__catalog goods">
+          <!-- <div class="goods__item">
+            <img src="img/4meats.png" alt="" class="goods__item-photo">
+            <h2 class="goods__item-title">4 Мяса</h2>
+            <p class="goods__item-description">Соус из цельных томатов, бекон, cалями Pepperoni, ветчина, баварские
+              колбаски, помидор Черри, болгарский перец, маслины, базилик</p>
+            <div class="goods__item-size">
+              <label>
+                <input type="radio" name="pizzaSize" id="bigSize" checked>
+                <span>Big (500гр)</span>
+              </label>
+              <label>
+                <input type="radio" name="pizzaSize" id="mediumSize">
+                <span>Medium (350гр)</span>
+              </label>
+            </div>
+            <div class="goods__item-price">
+              <div>Цена:</div>
+              <div>130 грн.</div>
+            </div>
+            <div class="goods__item-ob">
+              <div class="goods__item-ob-add-to-cart-btn">B корзину</div>
+              <div class="goods__ob-quantity">1</div>
+              <div class="goods__ob-counter">
+                <div class="goods__ob-increase-btn">+</div>
+                <div class="goods__ob-decrease-btn">-</div>
+              </div>
+            </div>
+          </div> -->
+        </div>
+      </section>
 
-			<h2 class="salad__header" id="salads">Нашы Салаты:</h2>
-			<section class="catalog__salad salad"></section>
+      <section class="salad-section">
+        <div id="salad-anchor"></div>
+        <h1 class="salad-section__title">Наши салаты:</h1>
+        <div class="salad-section__catalog goods"></div>
+      </section>
 
-			<h2 class="drinks__header" id="drinks">Нашы Напитки:</h2>
-			<section class="catalog__drinks drinks"></section>
+      <section class="drink-section">
+        <div id="drink-anchor"></div>
+        <h1 class="drink-section__title">Наши напитки:</h1>
+        <div class="drink-section__catalog goods"></div>
+      </section>
 
-		</div>
+      <section class="delivery-section">
+        <div id="delivery-anchor"></div>
+        <h1 class="selivery-section__title">Доставка:</h1>
+        <p>Стоимость доставки: </p>
+        <p>- 50грн при сумме заказа меньше 250грн</p>
+        <p>- Бесплатно при сумме заказа от 250грн и выше</p>
+        <p>Доставка производится в отмеченной на карте зоне c 10:00 до 22:00</p>
 
-		<section class="contacts">
-			<h1 id="contacts">Контакты и доставка:</h1>
+        <div class="delivery-section__map">
+          <iframe src="https://www.google.com/maps/d/embed?mid=1rg87asopLbDmEAZpLmO4ZEKbm0ecJRhz" width="640" height="480"></iframe>
+        </div>
+      </section>
+    </div>
+  </main>
 
-			<p>Стоимость доставки: </p>
-			<p>- 50грн при сумме заказа меньше 250грн</p>
-			<p>- Бесплатно при сумме заказа от 250грн и выше</p>
-			<p>Доставка производится в отмеченной на карте зоне c 10:00 до 22:00</p>
-			
-			<div class="map">
-				<iframe src="https://www.google.com/maps/d/embed?mid=1rg87asopLbDmEAZpLmO4ZEKbm0ecJRhz" width="640" height="480"></iframe>
-			</div>
+  <footer class="footer">
+    <div class="wrapper">
 
-		</section>
+      <img src="img/logo_rw.png" alt="logo" class="footer__logo">
 
+      <ul class="social__list">
+        <li class="social__item fb">
+          <a href="#"><img src="img/icon/fb.png" alt="fb"></a></li>
+        <li class="social__item insta">
+          <a href="#"><img src="img/icon/insta.png" alt="insta"></a></li>
+        <li class="social__item twitter">
+          <a href="#"><img src="img/icon/tw.png" alt="tw"></a></li>
+        <li class="social__item google">
+          <a href="#"><img src="img/icon/lg.png" alt="google+"></a></li>
+      </ul>
 
-	</main>
+      <p class="footer__address">г.Одесса.ул. Семена Палия 151а</p>
 
-	<aside class="popupWindow hidden">
-		<h3>Мы рады принять Ваш заказ по телефонам:</h3>
-		<table>
-				<tr>
-					<td>Vodafone:</td>
-					<td>050 393 22 72</td>
-				</tr>
-				<tr>
-					<td>KiyvStar:</td>
-					<td>067 393 22 72</td>
-				</tr>
-				<tr>
-					<td>LifeCell:</td>
-					<td>093 393 22 72</td>
-				</tr>
-			</table>
-		<p>c уважением Mama's Pizza</p>
-		<button class="popupWindow__btn-close">Закрыть</button>
-	</aside>
+      <section class="footer__contacts">
+        <table>
+          <tr>
+            <td>Vodafone:</td>
+            <td>050 393 22 72</td>
+          </tr>
+          <tr>
+            <td>KiyvStar:</td>
+            <td>067 393 22 72</td>
+          </tr>
+          <tr>
+            <td>LifeCell:</td>
+            <td>093 393 22 72</td>
+          </tr>
+        </table>
 
-	<aside class="gallery-box">
-		<div class="photo-container"><img src="img/photo/1.jpg" alt=""></div>
-	</aside>
+      </section>
+    </div>
+  </footer>
 
-
-	<footer class="footer">
-		<div class="wrapper">
-
-			<img src="img/logo_rw.png" alt="logo" class="footer__logo">
-
-			<ul class="social__list">
-				<li class="social__item fb">
-					<a href="#"><img src="img/icon/fb.png" alt="fb"></a></li>
-				<li class="social__item insta">
-					<a href="#"><img src="img/icon/insta.png" alt="insta"></a></li>
-				<li class="social__item twitter">
-					<a href="#"><img src="img/icon/tw.png" alt="tw"></a></li>
-				<li class="social__item google">
-					<a href="#"><img src="img/icon/lg.png" alt="google+"></a></li>
-			</ul>
-
-			<p class="footer__address">г.Одесса.ул. Семена Палия 151а</p>
-
-			<section class="footer__contacts">
-				<table>
-					<tr>
-						<td>Vodafone:</td>
-						<td>050 393 22 72</td>
-					</tr>
-					<tr>
-						<td>KiyvStar:</td>
-						<td>067 393 22 72</td>
-					</tr>
-					<tr>
-						<td>LifeCell:</td>
-						<td>093 393 22 72</td>
-					</tr>
-				</table>
-
-			</section>
-		</div>
-	</footer>
-
-	<script src="js/main.js"></script>
-
+  <script src="newJS.js"></script>
 </body>
 
 </html>
