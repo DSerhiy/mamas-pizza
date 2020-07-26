@@ -57,18 +57,18 @@ function renderGoods(data) {
         out += `<img src="${pizza[key].image}" alt="" class="goods__item-photo">`;
         out += `<h2 class="goods__item-title">${pizza[key].name}</h2>`;
         out += `<p class="goods__item-description">${pizza[key].description}</p>`;
-        out += `<div class="goods__item-size">`;
-        out += `<label>`;
-        out += `<input type="radio" name="${key}" class="pizzaSize" value="bigSize" checked>`;
-        out += `<span>Big (500гр)</span>`;
-        out += `</label>`;
-        out += `<label>`;
-        out += `<input type="radio" name="${key}" class="pizzaSize" value="mediumSize">`;
-        out += `<span>Medium (350гр)</span>`;
-        out += `</label>`;
-        out += `</div>`;
+        // out += `<div class="goods__item-size">`;
+        // out += `<label>`;
+        // out += `<input type="radio" name="${key}" class="pizzaSize" value="bigSize" checked>`;
+        // out += `<span>Big (500гр)</span>`;
+        // out += `</label>`;
+        // out += `<label>`;
+        // out += `<input type="radio" name="${key}" class="pizzaSize" value="mediumSize">`;
+        // out += `<span>Medium (350гр)</span>`;
+        // out += `</label>`;
+        // out += `</div>`;
         out += `<div class="goods__item-price">`;
-        out += `<div>Цена:</div>`;
+        out += `<div>Цена (500гр):</div>`;
         out += `<div>${pizza[key].price1} грн.</div>`;
         out += `</div>`;
         out += `<div class="goods__item-ob">`;
@@ -135,19 +135,20 @@ function renderGoods(data) {
     out = '';
 
     // event handler for radio btn pizzaSize
-    const btnRadioPizzaSize = document.querySelectorAll('.pizzaSize');
-    btnRadioPizzaSize.forEach((btn) => btn.addEventListener('click', switchPizzaSize));
-    function switchPizzaSize(e) {
-        const pizzaArt = e.target.name;
-        const pizzaSize = e.target.value;
-        const priceElement = e.target.parentElement.parentElement.nextElementSibling.lastChild;
+    // const btnRadioPizzaSize = document.querySelectorAll('.pizzaSize');
+    // btnRadioPizzaSize.forEach((btn) => btn.addEventListener('click', switchPizzaSize));
+    // function switchPizzaSize(e) {
+    //     const pizzaArt = e.target.name;
+    //     const pizzaSize = e.target.value;
+    //     const priceElement = e.target.parentElement.parentElement.nextElementSibling.lastChild;
 
-        if (pizzaSize === 'bigSize') {
-            priceElement.innerHTML = `${data.pizza[pizzaArt].price1} грн.`;
-        } else {
-            priceElement.innerHTML = `${data.pizza[pizzaArt].price2} грн.`;
-        }
-    }
+    //     if (pizzaSize === 'bigSize') {
+    //         priceElement.innerHTML = `${data.pizza[pizzaArt].price1} грн.`;
+    //     } else {
+    //         priceElement.innerHTML = `${data.pizza[pizzaArt].price2} грн.`;
+    //     }
+    // }
+   
     // event handler for btn_counter__increase
     const btnIncrease = document.querySelectorAll('.goods__ob-increase-btn');
     btnIncrease.forEach((btn) => btn.addEventListener('click', increaseQtty));
@@ -172,37 +173,34 @@ function renderGoods(data) {
     }
 
     // event handler to highlight navigation menu
+    const pizzaAnchor = document.getElementById('pizza-anchor');
+    const saladAnchor = document.getElementById('salad-anchor');
+    const drinkAnchor = document.getElementById('drink-anchor');
+    const deliveryAnchor = document.getElementById('delivery-anchor');
+
+    const pizzaBtn = document.querySelector("a[href='#pizza-anchor']");
+    const saladsBtn = document.querySelector("a[href='#salad-anchor']");
+    const drinksBtn = document.querySelector("a[href='#drink-anchor']");
+    const contactsBtn = document.querySelector("a[href='#delivery-anchor']");
+
     window.onscroll = () => {
-        const pizza = document.getElementById('pizza');
-        const salads = document.getElementById('salads');
-        const drinks = document.getElementById('drinks');
-        const contacts = document.getElementById('contacts');
-
-        const pizzaBtn = document.getElementById('nav__pizza');
-        const saladsBtn = document.getElementById('nav__salads');
-        const drinksBtn = document.getElementById('nav__drinks');
-        const contactsBtn = document.getElementById('nav__contacts');
-        console.log(contactsBtn);
-
-        if (window.pageYOffset >= (pizza.offsetTop) && window.pageYOffset < (salads.offsetTop)) {
+        
+        if (window.pageYOffset >= (pizzaAnchor.offsetTop - 2) && window.pageYOffset < (saladAnchor.offsetTop - 2)) {
             pizzaBtn.classList.add('active');
             saladsBtn.classList.remove('active');
             drinksBtn.classList.remove('active');
             contactsBtn.classList.remove('active');
-        } else if (window.pageYOffset >= (salads.offsetTop) && window.pageYOffset < (drinks.offsetTop)) {
+        } else if (window.pageYOffset >= (saladAnchor.offsetTop - 2) && window.pageYOffset < (drinkAnchor.offsetTop)) {
             saladsBtn.classList.add('active');
             pizzaBtn.classList.remove('active');
             drinksBtn.classList.remove('active');
             contactsBtn.classList.remove('active');
-        } else if (window.pageYOffset >= (drinks.offsetTop) && window.pageYOffset < (contacts.offsetTop)) {
-            console.log(drinks.offsetTop);
-            console.log(contacts.offsetTop);
-            console.log(window.pageYOffset)
+        } else if (window.pageYOffset >= (drinkAnchor.offsetTop) && window.pageYOffset < (deliveryAnchor.offsetTop - 2)) {
             saladsBtn.classList.remove('active');
             pizzaBtn.classList.remove('active');
             contactsBtn.classList.remove('active');
             drinksBtn.classList.add('active');
-        } else if (window.pageYOffset >= (contacts.offsetTop)) {
+        } else if (window.pageYOffset >= (deliveryAnchor.offsetTop - 2)) {
             saladsBtn.classList.remove('active');
             pizzaBtn.classList.remove('active');
             drinksBtn.classList.remove('active');

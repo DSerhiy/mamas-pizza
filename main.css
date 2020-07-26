@@ -74,7 +74,8 @@ ul {
   transition-duration: .3s;
 }
 
-.page-nav__nav-item a:hover {
+.page-nav__nav-item a:hover,
+.page-nav__nav-item a.active {
   font-size: 1.4rem;
   text-decoration: underline;
   color: #330708a8;
@@ -240,9 +241,9 @@ ul {
 
 .goods__ob-counter {
   flex: 0 0 30px;
-}
-
-.goods__ob-counter {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   cursor: pointer;
 }
 
