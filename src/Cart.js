@@ -1,6 +1,7 @@
 export class Cart {
   constructor() {
     this.productList = [];
+    this.subscribers = [];
   }
 
   add(id, qtty) {
@@ -11,14 +12,26 @@ export class Cart {
     else 
       this.productList.push({ id, qtty });
 
-    console.log(this);
+    this.cartChanged();
+    console.log(this.subscribers);
   }
 
   remove(id) {
     const index = this.products.findIndex(item => item.id === id);
     if (index !== -1)
       this.products.splice(index, 1);
-    
-    console.log(this);
+
+    this.cartChanged();    
+    console.log(this.subscribers);
+  }
+
+  cartChanged() {
+    this.subscribers.forEach(fn => {
+      fn(this.productList);
+    })
+  }
+
+  subscribe(fn) {
+    this.subscribers.push(fn);
   }
 }

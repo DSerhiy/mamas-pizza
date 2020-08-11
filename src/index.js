@@ -1,6 +1,32 @@
 import { Cart } from './Cart'
 
+let productsData;
 const cart = new Cart(); //моя корзина
+
+cart.subscribe(data => {
+  const cartEl = document.querySelector('.cart');
+  let out = ''
+  data.forEach(item => {
+    const product = productsData.find(product => product.id === item.id);
+    console.log(product);
+    out += `
+    <div class="cart__item">
+      <div class="cart__item-header">
+        <div class="cart__item-title">${product.name}</div>
+        <div class="cart__item-remove-btn">X</div>
+      </div>
+      <div class="cart__item-price-panel">
+        <div class="cart__item-price">${product.price1 * item.qtty} грн.</div>
+        <div class="quantity-control">
+          <div class="quantity-control__btn-add">+</div>
+          <span class="quantity-control__text">${item.qtty}</span>
+          <div class="quantity-control__btn-reduce">-</div>
+        </div>
+      </div>
+    </div>`
+  })
+  cartEl.innerHTML = out;
+})
 
 loadGoods();
 
@@ -39,6 +65,7 @@ function loadGoods() {
       let goodsData = JSON.parse(xhr.responseText);
       goodsData = goodsData.feed.entry;
       goodsData = arrayHelper(goodsData);
+      productsData = goodsData;
       renderGoods(goodsData);
     }
   };
