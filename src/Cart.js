@@ -3,20 +3,22 @@ export class Cart {
     this.productList = [];
   }
 
-  add(product) {
-    this.productList.push(product);
+  add(id, qtty) {
+    const index = this.productList.findIndex(item => item.id === id);
+
+    if (index !== -1) 
+      this.productList[index].qtty += qtty;
+    else 
+      this.productList.push({ id, qtty });
+
+    console.log(this);
   }
 
-  remove(productId) {
-    const index = this.products.findIndex(item => item.id === productId);
-    this.products.splice(index, 1);
-  }
-}
-
-export class Product {
-  constructor(id, name, price) {
-    this.id = id;
-    this.name = name;
-    this.price = price;
+  remove(id) {
+    const index = this.products.findIndex(item => item.id === id);
+    if (index !== -1)
+      this.products.splice(index, 1);
+    
+    console.log(this);
   }
 }
