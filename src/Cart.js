@@ -4,7 +4,7 @@ export class Cart {
     this.subscribers = [];
   }
 
-  add(id, qtty) {
+  add(id, qtty) {    
     const index = this.productList.findIndex(item => item.id === id);
 
     if (index !== -1) 
@@ -12,8 +12,7 @@ export class Cart {
     else 
       this.productList.push({ id, qtty });
 
-    this.cartChanged();
-    console.log(this.subscribers);
+    this.cartChanged();    
   }
 
   remove(id) {
@@ -21,8 +20,14 @@ export class Cart {
     if (index !== -1)
       this.productList.splice(index, 1);
 
-    this.cartChanged();    
-    console.log(this.subscribers);
+    this.cartChanged();  
+  }
+
+  getTotalSum() {
+    return this.productList.reduce((acc, cur) => {
+      console.log(acc, cur);
+      return acc + cur.price1 * cur.qtty;
+    }, 0)
   }
 
   cartChanged() {

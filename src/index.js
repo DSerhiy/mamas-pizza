@@ -9,15 +9,14 @@ cart.subscribe(data => {
   
   data.forEach(item => {
     const product = productsData.find(product => product.id === item.id);
-    console.log(product);
     out += `
     <div class="cart__item">
       <div class="cart__item-header">
         <div class="cart__item-title">${product.name}</div>
-        <div class="cart__item-remove-btn" data-id="${product.id}">X</div>
+        <div class="cart__item-remove-btn" data-id="${product.id}"><i class="fas fa-times"></i></div>
       </div>
       <div class="cart__item-price-panel">
-        <div class="cart__item-price">${product.price1 * item.qtty} грн.</div>
+        <div class="cart__item-price">${product.price1} x ${item.qtty} = ${product.price1 * item.qtty} грн.</div>
         <div class="quantity-control">
           <div class="quantity-control__btn-add">+</div>
           <span class="quantity-control__text">${item.qtty}</span>
@@ -25,15 +24,20 @@ cart.subscribe(data => {
         </div>
       </div>
     </div>`;
+
   })
+
+  out += `
+  <div class="cart__item">
+      Всего: ${cart.getTotalSum()}грн.
+  </div>`;
+
   cartEl.innerHTML = out;
 
   const cartBtnsRemove = cartEl.querySelectorAll('.cart__item-remove-btn');
-  console.log('test',cartBtnsRemove);
   cartBtnsRemove.forEach(btn => {
     btn.addEventListener('click', e => {
-      // console.log(e.target.dataset.id);
-      cart.remove(e.target.dataset.id);
+      cart.remove(e.currentTarget.dataset.id);
     })
   })
 })
@@ -41,8 +45,6 @@ cart.subscribe(data => {
 loadGoods();
 
 function arrayHelper(data) {
-  console.log('arrayHelper2', data);
-
   let out = [];
   for (let i = 0; i < data.length; i++) {
     let temp = {};
@@ -59,7 +61,6 @@ function arrayHelper(data) {
     out.push(temp);
   }
 
-  console.log('out', out);
   return out;
 }
 
