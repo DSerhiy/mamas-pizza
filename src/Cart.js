@@ -17,9 +17,9 @@ export class Cart {
   }
 
   remove(id) {
-    const index = this.products.findIndex(item => item.id === id);
+    const index = this.productList.findIndex(item => item.id === id);
     if (index !== -1)
-      this.products.splice(index, 1);
+      this.productList.splice(index, 1);
 
     this.cartChanged();    
     console.log(this.subscribers);

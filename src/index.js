@@ -6,6 +6,7 @@ const cart = new Cart(); //моя корзина
 cart.subscribe(data => {
   const cartEl = document.querySelector('.cart');
   let out = ''
+  
   data.forEach(item => {
     const product = productsData.find(product => product.id === item.id);
     console.log(product);
@@ -13,7 +14,7 @@ cart.subscribe(data => {
     <div class="cart__item">
       <div class="cart__item-header">
         <div class="cart__item-title">${product.name}</div>
-        <div class="cart__item-remove-btn">X</div>
+        <div class="cart__item-remove-btn" data-id="${product.id}">X</div>
       </div>
       <div class="cart__item-price-panel">
         <div class="cart__item-price">${product.price1 * item.qtty} грн.</div>
@@ -23,9 +24,18 @@ cart.subscribe(data => {
           <div class="quantity-control__btn-reduce">-</div>
         </div>
       </div>
-    </div>`
+    </div>`;
   })
   cartEl.innerHTML = out;
+
+  const cartBtnsRemove = cartEl.querySelectorAll('.cart__item-remove-btn');
+  console.log('test',cartBtnsRemove);
+  cartBtnsRemove.forEach(btn => {
+    btn.addEventListener('click', e => {
+      // console.log(e.target.dataset.id);
+      cart.remove(e.target.dataset.id);
+    })
+  })
 })
 
 loadGoods();
